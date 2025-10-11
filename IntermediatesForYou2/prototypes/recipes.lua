@@ -41,15 +41,15 @@ if mods["248k-Redux"] then
       name = "charged-crystal-imersite-powder",
       icons =
         {
-          { icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png", icon_size = 64},
-          { icon = "__248k-Redux__/ressources/fusion/fu_materials/fu_materials_energy_crystal_charged.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
+          { icon = "__Krastorio2Assets__/icons/items/imersite-powder.png", icon_size = 64},
+          { icon = "__248k-Redux-graphics__/ressources/fusion/fu_materials/fu_materials_energy_crystal_charged.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
         },
-      category = "crushing",
+      category = "kr-crushing",
       order = "a-a-a-1",
       enabled = false,
       energy_required = 4,
       ingredients = {{type="item", name="fu_materials_energy_charged_crystal", amount=1}},
-      results = {{type="item", name="imersite-powder", amount=2}},
+      results = {{type="item", name="kr-imersite-powder", amount=2}},
     }
   })
   util.add_unlock("kr-imersium-processing", "charged-crystal-imersite-powder")
@@ -291,7 +291,7 @@ if mods["space-exploration"] then
   if data.raw.item["cobalt-electromagnet"] then
     table.insert(trace_rare_ore_extraction_ingredients, {type="item", name="cobalt-electromagnet", amount=1})
   end
-  local trace_rare_ore_extraction_results = {{type="item", name="sand", amount=1}, {type="item", name="se-iridium-powder", amount=1, probability=0.1}, {type="item", name="se-holmium-powder", amount=1, probability=0.1}, {type="item", name="se-beryllium-powder", amount=1, probability=0.1}}
+  local trace_rare_ore_extraction_results = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=1}, {type="item", name="se-iridium-powder", amount=1, probability=0.1}, {type="item", name="se-holmium-powder", amount=1, probability=0.1}, {type="item", name="se-beryllium-powder", amount=1, probability=0.1}}
   if data.raw.item["cobalt-electromagnet"] then
     table.insert(trace_rare_ore_extraction_results, {type="item", name="cobalt-electromagnet", amount=1, probability=0.95})
   end

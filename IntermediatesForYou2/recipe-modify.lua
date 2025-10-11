@@ -171,7 +171,7 @@ if (mods["MDbobelectronics2"] and mods["Krastorio2"]) or false then
 end
 
 if mods["Krastorio2"] then
-    util.add_ingredient("stack-filter-inserter", "inserter-parts", 4)
+    util.add_ingredient("stack-filter-inserter", "kr-inserter-parts", 4)
 
     if mods["ThemTharHills-Updated"] then
         util.remove_ingredient("processing-unit", "integrated-circuit")
