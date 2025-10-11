@@ -1,66 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.1
-Date: 2024-07-30
-  Features:
-    - Increased elementite smelting from 2 -> 4
+Version: 2.0.1
+Date: 11.10.2025
+  Bug Fixes:
+    - Increase mod compatibility
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.0
-Date: 2024-07-16
+Version: 2.0.0
+Date: 10.10.2025
   Features:
-    - Added K2 imersite powder recipe if 248k is installed.
-    - Updated elementite production chain.
-    - Updated compatibility with Tantalite.
-    - Fixed missing locale for elementite processing.
----------------------------------------------------------------------------------------------------
-Version: 0.5.0
-Date: 2024-06-29
-  Features:
-    - Added slag from sand if K2 or AAI is installed.
-    - Added elementite if SE is installed.
----------------------------------------------------------------------------------------------------
-Version: 0.4.2
-Date: 2024-01-21
-  Features:
-    - Removed old unused files.
----------------------------------------------------------------------------------------------------
-Version: 0.4.1
-Date: 2024-01-06
-  Features:
-    - Moved silver pyrometallurgi to ChemistryForYou2 mod.
----------------------------------------------------------------------------------------------------
-Version: 0.4.0
-Date: 2023-12-28
-  Features:
-    - Added SE recycling recipe for long handed inserter.
-    - Added inserter parts to stack filter inserter.
-    - Added silver as a byproduct to zinc. (I need more silver)
-    - Added silver pyrometallurgi recipe to convert zinc and lead ore to silver. (I need even more silver!)
-    - Added low quality advanced circuit recipe if ThemTharHills is installed. (ThemTharHills needs too much gold when you have many mods and SE)
-    - Changed stack filter inserter to use filter inserter instead of stack inserter.
----------------------------------------------------------------------------------------------------
-Version: 0.3.1
-Date: 2023-12-24
-  Features:
-    - Changed modules 2 and 3 recipes to be more balanced if SE is installed.
----------------------------------------------------------------------------------------------------
-Version: 0.3.0
-Date: 2023-12-19
-  Features:
-    - Added springs.
-    - Added shock absorber.
----------------------------------------------------------------------------------------------------
-Version: 0.2.0
-Date: 2023-12-04
-  Features:
-    - Added large turret base.
-    - Added large turret base to some rampant arsenal and K2 turrets.
----------------------------------------------------------------------------------------------------
-Version: 0.1.1
-Date: 2023-12-04
-  Features:
-    - Fixed startup error when not playing If I Had a Nickel hardmode.
----------------------------------------------------------------------------------------------------
-Version: 0.1.0
-Date: 2023-12-03
-  Features:
-    - Alpha release.
+    - Update to Factorio 2.0
