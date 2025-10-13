@@ -149,7 +149,7 @@ end
 --electronics
 if (mods["MDbobelectronics2"] and mods["Krastorio2"]) or false then
     util.replace_ingredient("kr-electronic-components", "plastic-bar", "basic-electronic-components")
-    util.replace_ingredient("kr-electronic-components", "glass", "BOBMD-electronic-components")
+    util.replace_ingredient("kr-electronic-components", mods["Krastorio2"] and "kr-glass" or "glass", "BOBMD-electronic-components")
     util.remove_ingredient("kr-electronic-components", "silicon-wafer")
 
     util.remove_ingredient("processing-unit", "cpu")
@@ -182,7 +182,7 @@ if mods["Krastorio2"] then
         end
     end
     --make the greenhouse upgradeable to bio lab
-    util.remove_ingredient("kr-bio-lab", "glass")
+    util.remove_ingredient("kr-bio-lab", "kr-glass")
     util.remove_ingredient("kr-bio-lab", "kr-iron-beam")
     util.add_ingredient("kr-bio-lab", "kr-greenhouse", 1)
 
@@ -228,7 +228,7 @@ if mods["space-exploration"] then
 
     if mods["248k-Redux"] then
         util.replace_ingredient("se-canister", "plastic-bar", "fi_materials_GFK", 5)
-        util.remove_ingredient("se-canister", "glass")
+        util.remove_ingredient("se-canister", mods["Krastorio2"] and "kr-glass" or "glass")
 
         util.add_ingredient("effectivity-module-2", "el_lithium_battery", 10)
     end
@@ -236,5 +236,5 @@ end
 
 if mods["BrassTacks-Updated"] then
     util.set_main_product("zinc-plate", "zinc-plate")
-    util.add_product("zinc-plate", {name="silver-ore", amount=1, probability=0.06})
+    util.add_product("zinc-plate", {type = "item", name="silver-ore", amount=1, probability=0.06})
 end

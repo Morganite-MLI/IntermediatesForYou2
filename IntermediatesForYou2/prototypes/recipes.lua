@@ -217,9 +217,9 @@ end
 if data.raw.item["circuit-board"] then
   table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="circuit-board", amount=1})
 end
-local low_quality_advanced_circuit_results = {{name="advanced-circuit", amount=1, probability=0.75}}
+local low_quality_advanced_circuit_results = {{ type = "item", name = "advanced-circuit", amount=1, probability=0.75}}
 if mods["space-exploration"] then
-  table.insert(low_quality_advanced_circuit_results, {name="se-scrap", amount=1, probability=0.25})
+  table.insert(low_quality_advanced_circuit_results, { type = "item", name = "se-scrap", amount=1, probability=0.25})
 end
 
 data:extend({
