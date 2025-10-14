@@ -21,13 +21,9 @@ util.add_ingredient("fast-inserter", "shock-absorber", 1)
 util.add_ingredient("car", "shock-absorber", 4)
 util.add_ingredient("artillery-turret", "shock-absorber", 10)
 
-util.add_ingredient("stack-filter-inserter", "filter-inserter", 1)
-util.remove_ingredient("stack-filter-inserter", "stack-inserter")
-
 -- Mod changes
 if mods["bztin"] then
     util.remove_ingredient("fast-inserter", "bronze-plate")
-    util.remove_ingredient("filter-inserter", "bronze-plate")
     if data.raw.item["motorized-articulator"] then
         util.remove_ingredient("motorized-articulator", "bronze-plate")
         util.add_ingredient("motorized-articulator", "spring", 2)
@@ -171,8 +167,6 @@ if (mods["MDbobelectronics2"] and mods["Krastorio2"]) or false then
 end
 
 if mods["Krastorio2"] then
-    util.add_ingredient("stack-filter-inserter", "kr-inserter-parts", 4)
-
     if mods["ThemTharHills-Updated"] then
         util.remove_ingredient("processing-unit", "integrated-circuit")
         util.remove_ingredient("processing-unit", "cpu")
