@@ -4,14 +4,14 @@ if mods["MDbobelectronics2"] then
     util.remove_ingredient("advanced-processing-unit", "processing-electronics")
 end
 
-if (mods["Krastorio2"] and mods["bzgas"]) or false then
-    if mods["bzgold"] then
+if (mods["Krastorio2"] and mods["bzgas2"]) or false then
+    if mods["bzgold2"] then
         util.remove_ingredient("chemical-plant", "silver-plate")
     end
-    if mods["bzaluminum"] then
+    if mods["bzaluminum2"] then
         util.remove_ingredient("kr-filtration-plant", "aluminum-plate")
     end
-    if mods["bztin"] then
+    if mods["bztin2"] then
         util.remove_ingredient("kr-filtration-plant", "solder")
     end
     util.remove_ingredient("kr-filtration-plant", "pipe")

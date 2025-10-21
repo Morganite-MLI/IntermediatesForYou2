@@ -22,7 +22,7 @@ util.add_ingredient("car", "shock-absorber", 4)
 util.add_ingredient("artillery-turret", "shock-absorber", 10)
 
 -- Mod changes
-if mods["bztin"] then
+if mods["bztin2"] then
     util.remove_ingredient("fast-inserter", "bronze-plate")
     if data.raw.item["motorized-articulator"] then
         util.remove_ingredient("motorized-articulator", "bronze-plate")
@@ -34,7 +34,7 @@ if mods["bismuth"] then
     util.remove_ingredient("satellite", "bismuth-glass")
 end
 
-if mods["bzcarbon"] then
+if mods["bzcarbon2"] then
     util.remove_ingredient("satellite", "graphene")
 end
 
@@ -47,7 +47,7 @@ else
     util.remove_ingredient("gun-turret", "iron-gear-wheel")
 end
 
-if mods["bzlead"] then
+if mods["bzlead2"] then
     util.remove_ingredient("flamethrower-turret", "lead-plate")
 
     util.remove_ingredient("pipe-to-ground", "lead-plate")
@@ -100,7 +100,7 @@ if mods["RampantArsenal"]  then
     util.remove_ingredient("suppression-cannon-item-rampant-arsenal", "steel-plate")
     util.remove_ingredient("suppression-cannon-item-rampant-arsenal", "concrete")
     util.add_ingredient("suppression-cannon-item-rampant-arsenal", "turret-large-base", 1)
-    if mods["bzlead"] then
+    if mods["bzlead2"] then
         util.remove_ingredient("rapid-cannon-item-rampant-arsenal", "lead-plate")
         util.remove_ingredient("suppression-cannon-item-rampant-arsenal", "lead-plate")
     end
@@ -115,12 +115,12 @@ if mods["EndgameCombat"] then
 end
 
 --chemical plant
-if mods["bzgas"] then
+if mods["bzgas2"] then
     util.remove_ingredient("chemical-plant", "stone-brick")
     util.remove_ingredient("chemical-plant", "pipe")
     util.add_ingredient("chemical-plant", "basic-chemical-plant", 1)
 
-    if (mods["bzlead"] and mods["bztin"]) or false then
+    if (mods["bzlead2"] and mods["bztin2"]) or false then
         util.remove_ingredient("basic-chemical-plant", "tin-plate")
         util.remove_ingredient("basic-chemical-plant", "lead-plate")
         util.add_ingredient("basic-chemical-plant", "solder", 8)
@@ -188,7 +188,7 @@ if mods["Krastorio2"] then
     util.add_ingredient("kr-rocket-turret", "turret-large-base", 1)
     util.add_ingredient("kr-railgun-turret", "turret-large-base", 1)
     util.remove_ingredient("kr-railgun-turret", "steel-beam")
-    if mods["bzlead"] then
+    if mods["bzlead2"] then
         util.remove_ingredient("kr-laser-artillery-turret", "lead-plate")
         util.remove_ingredient("kr-rocket-turret", "lead-plate")
         util.remove_ingredient("kr-railgun-turret", "lead-plate")
@@ -212,7 +212,7 @@ if mods["space-exploration"] then
     util.set_ingredient("speed-module-4", "se-iridium-plate", 90)
     util.add_ingredient("speed-module-4", "elementium-plate", 30)
 
-    if mods["bztin"] then
+    if mods["bztin2"] then
         util.remove_ingredient("se-space-biochemical-laboratory", "solder")
     end
 

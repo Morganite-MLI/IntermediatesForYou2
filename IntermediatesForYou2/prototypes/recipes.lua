@@ -7,7 +7,7 @@ end
 
 if mods["Krastorio2"] then
   local electronic_ingredients = {{type="item", name="kr-electronic-components", amount=3}}
-  if mods["bzgold"] then
+  if mods["bzgold2"] then
     electronic_ingredients = {{type="item", name="kr-electronic-components", amount=1}, (mods["ThemTharHills-Updated"] and {type="item", name="integrated-circuit", amount=5}) or (mods["MDbobelectronics2"] and {type="item", name="intergrated-electronics", amount=2}), {type="item", name="cpu", amount=1}}
   elseif mods["MDbobelectronics2"] then
     electronic_ingredients = {{type="item", name="kr-electronic-components", amount=1}, {type="item", name="intergrated-electronics", amount=2}, {type="item", name="processing-electronics", amount=1}}
@@ -67,7 +67,7 @@ local satellite_body_ingredients = {{type="item", name="low-density-structure", 
 if mods["bismuth"] then
   table.insert(satellite_body_ingredients, {type="item", name="bismuth-glass", amount=100})
 end
-if mods["bzcarbon"] then
+if mods["bzcarbon2"] then
   table.insert(satellite_body_ingredients, {type="item", name="graphene", amount=100})
 end
 if data.raw.item["gimbaled-thruster"] then
@@ -190,7 +190,7 @@ util.add_unlock("logistics", "spring")
 util.add_unlock("rocket-silo","satellite-body")
 util.add_unlock("fast-inserter", "shock-absorber")
 
-if mods["bzfoundry"] and data.raw.item["bronze-plate"] then
+if mods["bzfoundry2"] and data.raw.item["bronze-plate"] then
 data:extend({
   {
     type = "recipe",
