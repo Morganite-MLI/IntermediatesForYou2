@@ -12,50 +12,50 @@ if mods["Krastorio2"] then
   elseif mods["MDbobelectronics2"] then
     electronic_ingredients = {{type="item", name="kr-electronic-components", amount=1}, {type="item", name="intergrated-electronics", amount=2}, {type="item", name="processing-electronics", amount=1}}
   end
-data:extend({
-  {
-    type = "item",
-    name = "advanced-electronic-components",
-    icon = "__IntermediatesForYou2__/graphics/icons/advanced-electronic-components.png",
-    icon_size = 64,
-    group = "kr-electronic-components",
-    subgroup = "intermediate-product",
-    order = "e03",
-    stack_size = 100,
-  },
-  {
-    type = "recipe",
-    name = "advanced-electronic-components",
-    category = "crafting",
-    order = "e03",
-    enabled = false,
-    energy_required = 4,
-    ingredients = electronic_ingredients,
-    results = {{type="item", name="advanced-electronic-components", amount=2}},
-  }
-})
-if mods["248k-Redux"] then
   data:extend({
     {
+      type = "item",
+      name = "advanced-electronic-components",
+      icon = "__IntermediatesForYou2__/graphics/icons/advanced-electronic-components.png",
+      icon_size = 64,
+      group = "kr-electronic-components",
+      subgroup = "intermediate-product",
+      order = "e03",
+      stack_size = 100,
+    },
+    {
       type = "recipe",
-      name = "charged-crystal-imersite-powder",
-      icons =
-        {
-          { icon = "__Krastorio2Assets__/icons/items/imersite-powder.png", icon_size = 64},
-          { icon = "__248k-Redux-graphics__/ressources/fusion/fu_materials/fu_materials_energy_crystal_charged.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
-        },
-      category = "kr-crushing",
-      order = "a-a-a-1",
+      name = "advanced-electronic-components",
+      category = "crafting",
+      order = "e03",
       enabled = false,
       energy_required = 4,
-      ingredients = {{type="item", name="fu_materials_energy_charged_crystal", amount=1}},
-      results = {{type="item", name="kr-imersite-powder", amount=2}},
+      ingredients = electronic_ingredients,
+      results = {{type="item", name="advanced-electronic-components", amount=2}},
     }
   })
-  util.add_unlock("kr-imersium-processing", "charged-crystal-imersite-powder")
-end
+  if mods["248k-Redux"] then
+    data:extend({
+      {
+        type = "recipe",
+        name = "charged-crystal-imersite-powder",
+        icons =
+          {
+            { icon = "__Krastorio2Assets__/icons/items/imersite-powder.png", icon_size = 64},
+            { icon = "__248k-Redux-graphics__/ressources/fusion/fu_materials/fu_materials_energy_crystal_charged.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
+          },
+        category = "kr-crushing",
+        order = "a-a-a-1",
+        enabled = false,
+        energy_required = 4,
+        ingredients = {{type="item", name="fu_materials_energy_charged_crystal", amount=1}},
+        results = {{type="item", name="kr-imersite-powder", amount=2}},
+      }
+    })
+    util.add_unlock("kr-imersium-processing", "charged-crystal-imersite-powder")
+  end
 
-util.add_unlock("processing-unit", "advanced-electronic-components")
+  util.add_unlock("processing-unit", "advanced-electronic-components")
 end
 
 local turret_large_base_ingredients = {(data.raw.item["tantalum-titanium-beam"] and {type="item", name="tantalum-titanium-beam", amount=60}) or {type="item", name="steel-plate", amount=60}, {type="item", name="concrete", amount=60}}
