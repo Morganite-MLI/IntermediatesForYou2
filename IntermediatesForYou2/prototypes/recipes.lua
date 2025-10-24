@@ -8,7 +8,12 @@ end
 if mods["Krastorio2"] then
   local electronic_ingredients = {{type="item", name="kr-electronic-components", amount=3}}
   if mods["bzgold2"] then
-    electronic_ingredients = {{type="item", name="kr-electronic-components", amount=1}, (mods["ThemTharHills-Updated"] and {type="item", name="integrated-circuit", amount=5}) or (mods["MDbobelectronics2"] and {type="item", name="intergrated-electronics", amount=2}), {type="item", name="cpu", amount=1}}
+    electronic_ingredients = {{type="item", name="kr-electronic-components", amount=1}, {type="item", name="cpu", amount=1}}
+    if mods["ThemTharHills-Updated"] then
+      table.insert(electronic_ingredients, {type="item", name="integrated-circuit", amount=5})
+    elseif mods["MDbobelectronics2"] then
+      table.insert(electronic_ingredients, {type="item", name="intergrated-electronics", amount=2})
+    end
   elseif mods["MDbobelectronics2"] then
     electronic_ingredients = {{type="item", name="kr-electronic-components", amount=1}, {type="item", name="intergrated-electronics", amount=2}, {type="item", name="processing-electronics", amount=1}}
   end
