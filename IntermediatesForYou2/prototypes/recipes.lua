@@ -200,7 +200,6 @@ data:extend({
   {
     type = "recipe",
     name = "bronze-spring",
-    localised_name = { "item-name.bronze-spring" },
     category = "crafting",
     order = "s2[spring]",
     enabled = false,
