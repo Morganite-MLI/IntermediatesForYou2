@@ -202,6 +202,14 @@ data:extend({
     name = "bronze-spring",
     category = "crafting",
     order = "s2[spring]",
+    icons = (mods["bztin2"] and
+        {
+          { icon = "__IntermediatesForYou2__/graphics/icons/spring.png", icon_size = 64 },
+          { icon = "__bztin2__/graphics/icons/bronze-plate.png",   icon_size = 128, scale = 0.125, shift = { -8, -8 } },
+        } or {
+          { icon = "__IntermediatesForYou2__/graphics/icons/spring.png", icon_size = 128 }
+        }
+      ),
     enabled = false,
     energy_required = 2,
     ingredients = {{type="item", name="bronze-plate", amount=1}},
