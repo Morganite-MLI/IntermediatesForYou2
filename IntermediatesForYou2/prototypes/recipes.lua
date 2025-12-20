@@ -203,67 +203,67 @@ if mods["bzfoundry2"] and data.raw.item["bronze-plate"] then
                          or data.raw.item["bronze-plate"].icons and data.raw.item["bronze-plate"].icons[1].icon
   local bronze_plate_icon_size = data.raw.item["bronze-plate"].icon_size
                               or data.raw.item["bronze-plate"].icons and data.raw.item["bronze-plate"].icons[1].icon_size
-data:extend({
-  {
-    type = "recipe",
-    name = "bronze-spring",
-    category = "crafting",
-    order = "s2[spring]",
-    icons = (data.raw.item["bronze-plate"] and
-        {
-          { icon = spring_icon, icon_size = spring_icon_size },
-          { icon = bronze_plate_icon, icon_size = bronze_plate_icon_size, scale = 0.125, shift = { -8, -8 } }
-        } or {
-          { icon = spring_icon, icon_size = spring_icon_size }
-        }
-      ),
-    enabled = false,
-    energy_required = 2,
-    ingredients = {{type="item", name="bronze-plate", amount=1}},
-    results = {{type="item", name="spring", amount=2}},
-  }
-})
+  data:extend({
+    {
+      type = "recipe",
+      name = "bronze-spring",
+      category = "crafting",
+      order = "s2[spring]",
+      icons = (data.raw.item["bronze-plate"] and
+          {
+            { icon = spring_icon, icon_size = spring_icon_size },
+            { icon = bronze_plate_icon, icon_size = bronze_plate_icon_size, scale = 0.125, shift = { -8, -8 } }
+          } or {
+            { icon = spring_icon, icon_size = spring_icon_size }
+          }
+        ),
+      enabled = false,
+      energy_required = 2,
+      ingredients = {{type="item", name="bronze-plate", amount=1}},
+      results = {{type="item", name="spring", amount=2}},
+    }
+  })
   util.add_unlock("foundry", "bronze-spring")
 end
 
 if mods["ThemTharHills-Updated"] then
-local low_quality_advanced_circuit_ingredients = {{type="item", name="copper-cable", amount=3}, {type="item", name="electronic-circuit", amount=3}}
-if data.raw.item["solder"] then
-  table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="solder", amount=4})
-end
-if data.raw.item["kr-electronic-components"] then
-  table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="kr-electronic-components", amount=2})
-end
-if data.raw.item["circuit-board"] then
-  table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="circuit-board", amount=1})
-end
-local low_quality_advanced_circuit_results = {{ type = "item", name = "advanced-circuit", amount=1, probability=0.75}}
-if mods["space-exploration"] then
-  table.insert(low_quality_advanced_circuit_results, { type = "item", name = "se-scrap", amount=1, probability=0.25})
-end
+  local low_quality_advanced_circuit_ingredients = {{type="item", name="copper-cable", amount=3}, {type="item", name="electronic-circuit", amount=3}}
+  if data.raw.item["solder"] then
+    table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="solder", amount=4})
+  end
+  if data.raw.item["kr-electronic-components"] then
+    table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="kr-electronic-components", amount=2})
+  end
+  if data.raw.item["circuit-board"] then
+    table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="circuit-board", amount=1})
+  end
+  local low_quality_advanced_circuit_results = {{ type = "item", name = "advanced-circuit", amount=1, probability=0.75}}
+  if mods["space-exploration"] then
+    table.insert(low_quality_advanced_circuit_results, { type = "item", name = "se-scrap", amount=1, probability=0.25})
+  end
 
-data:extend({
-  {
-    type = "recipe",
-    name = "low-quality-advanced-circuit",
-    category = "crafting",
-    icons = (mods["Krastorio2"] and
-        {
-          { icon = "__base__/graphics/icons/advanced-circuit.png", icon_size = 64},
-          { icon = "__base__/graphics/icons/copper-cable.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
-        } or {
-          { icon = "__base__/graphics/icons/advanced-circuit.png", icon_size = 64},
-        }
-    ),
-    main_product = "advanced-circuit",
-    order = "f",
-    enabled = false,
-    energy_required = 6,
-    ingredients = low_quality_advanced_circuit_ingredients,
-    results = low_quality_advanced_circuit_results,
-  }
-})
-util.add_unlock("advanced-circuit", "low-quality-advanced-circuit")
+  data:extend({
+    {
+      type = "recipe",
+      name = "low-quality-advanced-circuit",
+      category = "crafting",
+      icons = (mods["Krastorio2"] and
+          {
+            { icon = "__base__/graphics/icons/advanced-circuit.png", icon_size = 64},
+            { icon = "__base__/graphics/icons/copper-cable.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
+          } or {
+            { icon = "__base__/graphics/icons/advanced-circuit.png", icon_size = 64},
+          }
+      ),
+      main_product = "advanced-circuit",
+      order = "f",
+      enabled = false,
+      energy_required = 6,
+      ingredients = low_quality_advanced_circuit_ingredients,
+      results = low_quality_advanced_circuit_results,
+    }
+  })
+  util.add_unlock("advanced-circuit", "low-quality-advanced-circuit")
 end
 
 if mods["aai-industry"] or mods["Krastorio2"] then
