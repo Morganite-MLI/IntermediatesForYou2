@@ -206,7 +206,7 @@ data:extend({
     name = "bronze-spring",
     category = "crafting",
     order = "s2[spring]",
-    icons = (mods["bztin2"] and
+    icons = (data.raw.item["bronze-plate"] and
         {
           { icon = "__IntermediatesForYou2__/graphics/icons/spring.png", icon_size = 64 },
           { icon = bronze_plate_icon, icon_size = bronze_plate_icon_size, scale = 0.125, shift = { -8, -8 } }
