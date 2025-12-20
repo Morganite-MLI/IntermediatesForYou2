@@ -196,6 +196,10 @@ util.add_unlock("rocket-silo","satellite-body")
 util.add_unlock("fast-inserter", "shock-absorber")
 
 if mods["bzfoundry2"] and data.raw.item["bronze-plate"] then
+  local bronze_plate_icon = data.raw.item["bronze-plate"].icon 
+                         or data.raw.item["bronze-plate"].icons and data.raw.item["bronze-plate"].icons[1].icon
+  local bronze_plate_icon_size = data.raw.item["bronze-plate"].icon_size
+                              or data.raw.item["bronze-plate"].icons and data.raw.item["bronze-plate"].icons[1].icon_size
 data:extend({
   {
     type = "recipe",
@@ -205,7 +209,7 @@ data:extend({
     icons = (mods["bztin2"] and
         {
           { icon = "__IntermediatesForYou2__/graphics/icons/spring.png", icon_size = 64 },
-          { icon = "__bztin2__/graphics/icons/bronze-plate.png",   icon_size = 128, scale = 0.125, shift = { -8, -8 } },
+          { icon = bronze_plate_icon, icon_size = bronze_plate_icon_size, scale = 0.125, shift = { -8, -8 } }
         } or {
           { icon = "__IntermediatesForYou2__/graphics/icons/spring.png", icon_size = 128 }
         }
