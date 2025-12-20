@@ -87,6 +87,9 @@ if data.raw.item["rubber"] then
   table.insert(shock_absorber_ingredients, {type="item", name="rubber", amount=1})
 end
 
+local spring_icon = "__IntermediatesForYou2__/graphics/icons/spring.png"
+local spring_icon_size = 64
+
 data:extend({
   {
     type = "item",
@@ -111,8 +114,8 @@ data:extend({
   {
     type = "item",
     name = "spring",
-    icon = "__IntermediatesForYou2__/graphics/icons/spring.png",
-    icon_size = 64,
+    icon = spring_icon,
+    icon_size = spring_icon_size,
     group = "intermediate-product",
     subgroup = "intermediate-product",
     order = "a[spring]",
@@ -208,10 +211,10 @@ data:extend({
     order = "s2[spring]",
     icons = (data.raw.item["bronze-plate"] and
         {
-          { icon = "__IntermediatesForYou2__/graphics/icons/spring.png", icon_size = 64 },
+          { icon = spring_icon, icon_size = spring_icon_size },
           { icon = bronze_plate_icon, icon_size = bronze_plate_icon_size, scale = 0.125, shift = { -8, -8 } }
         } or {
-          { icon = "__IntermediatesForYou2__/graphics/icons/spring.png", icon_size = 128 }
+          { icon = spring_icon, icon_size = spring_icon_size }
         }
       ),
     enabled = false,
