@@ -198,7 +198,7 @@ util.add_unlock("logistics", "spring")
 util.add_unlock("rocket-silo","satellite-body")
 util.add_unlock("fast-inserter", "shock-absorber")
 
-if mods["bzfoundry2"] and data.raw.item["bronze-plate"] then
+if data.raw.item["bronze-plate"] then
   local bronze_plate_icon = data.raw.item["bronze-plate"].icon 
                          or data.raw.item["bronze-plate"].icons and data.raw.item["bronze-plate"].icons[1].icon
   local bronze_plate_icon_size = data.raw.item["bronze-plate"].icon_size
@@ -223,7 +223,11 @@ if mods["bzfoundry2"] and data.raw.item["bronze-plate"] then
       results = {{type="item", name="spring", amount=2}},
     }
   })
-  util.add_unlock("foundry", "bronze-spring")
+  if mods["bzfoundry2"] and not settings.startup["bzfoundry-minimal"].value then
+    util.add_unlock("foundry", "bronze-spring")
+  else
+    util.add_unlock("automation", "bronze-spring")
+  end
 end
 
 if mods["ThemTharHills-Updated"] then
