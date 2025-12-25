@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 10.12.2025
+  Bug Fixes:
+    - Fix recipe name for elementium-heat-shielding (thanks Hraukr)
+    - Fix recipe name and icon for bronze-spring (thanks Hraukr)
+    - Fix recipe unlock for bronze spring when foundry is disabled
+---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 10.12.2025
   Bug Fixes:
