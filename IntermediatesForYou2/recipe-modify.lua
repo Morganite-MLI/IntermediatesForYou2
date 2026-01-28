@@ -143,7 +143,7 @@ if mods["bobassembly"] then
 end
 
 --electronics
-if (mods["MDbobelectronics2"] and mods["Krastorio2"]) or false then
+if mods["MDbobelectronics2"] and mods["Krastorio2"] then
     util.replace_ingredient("kr-electronic-components", "plastic-bar", "basic-electronic-components")
     util.replace_ingredient("kr-electronic-components", mods["Krastorio2"] and "kr-glass" or "glass", "BOBMD-electronic-components")
     util.remove_ingredient("kr-electronic-components", "silicon-wafer")

@@ -17,28 +17,30 @@ if mods["Krastorio2"] then
   elseif mods["MDbobelectronics2"] then
     electronic_ingredients = {{type="item", name="kr-electronic-components", amount=1}, {type="item", name="intergrated-electronics", amount=2}, {type="item", name="processing-electronics", amount=1}}
   end
-  data:extend({
-    {
-      type = "item",
-      name = "advanced-electronic-components",
-      icon = "__IntermediatesForYou2__/graphics/icons/advanced-electronic-components.png",
-      icon_size = 64,
-      group = "kr-electronic-components",
-      subgroup = "intermediate-product",
-      order = "e03",
-      stack_size = 100,
-    },
-    {
-      type = "recipe",
-      name = "advanced-electronic-components",
-      category = "crafting",
-      order = "e03",
-      enabled = false,
-      energy_required = 4,
-      ingredients = electronic_ingredients,
-      results = {{type="item", name="advanced-electronic-components", amount=2}},
-    }
-  })
+  if mods["MDbobelectronics2"] or mods["ThemTharHills-Updated"] then
+    data:extend({
+      {
+        type = "item",
+        name = "advanced-electronic-components",
+        icon = "__IntermediatesForYou2__/graphics/icons/advanced-electronic-components.png",
+        icon_size = 64,
+        group = "kr-electronic-components",
+        subgroup = "intermediate-product",
+        order = "e03",
+        stack_size = 100,
+      },
+      {
+        type = "recipe",
+        name = "advanced-electronic-components",
+        category = "crafting",
+        order = "e03",
+        enabled = false,
+        energy_required = 4,
+        ingredients = electronic_ingredients,
+        results = {{type="item", name="advanced-electronic-components", amount=2}},
+      }
+    })
+  end
   if mods["248k-Redux"] then
     data:extend({
       {
