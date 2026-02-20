@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 20.02.2026
+  Bug Fixes:
+    - advanced-electronic-components is only added if either MDbobelectronics2 or ThemTharHills-Updated is active
+---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 10.12.2025
   Bug Fixes:
