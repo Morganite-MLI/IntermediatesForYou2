@@ -38,7 +38,7 @@ if mods["space-exploration"] then
     end
 
     if mods["248k-Redux"] then
-        util.replace_ingredient("se-canister", "plastic-bar", "fi_materials_GFK", 5)
+        util.replace_ingredient("se-canister", "plastic-bar", "fi_GFK", 5)
         util.remove_ingredient("se-canister", mods["Krastorio2"] and "kr-glass" or "glass")
     end
 end

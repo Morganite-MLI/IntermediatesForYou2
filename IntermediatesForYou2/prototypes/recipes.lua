@@ -55,7 +55,7 @@ if mods["Krastorio2"] then
         order = "a-a-a-1",
         enabled = false,
         energy_required = 4,
-        ingredients = {{type="item", name="fu_materials_energy_charged_crystal", amount=1}},
+        ingredients = {{type="item", name="fu_energy_charged_crystal", amount=1}},
         results = {{type="item", name="kr-imersite-powder", amount=2}},
       }
     })
@@ -81,7 +81,7 @@ if data.raw.item["gimbaled-thruster"] then
   table.insert(satellite_body_ingredients, {type="item", name="gimbaled-thruster", amount=10})
 end
 if mods["248k-Redux"] then
-  table.insert(satellite_body_ingredients, {type="item", name="fu_materials_KFK", amount=10})
+  table.insert(satellite_body_ingredients, {type="item", name="fu_KFK", amount=10})
 end
 
 local shock_absorber_ingredients = {{type="item", name="spring", amount=1}, {type="item", name="iron-stick", amount=1}}

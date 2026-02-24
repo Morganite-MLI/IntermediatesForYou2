@@ -9,7 +9,7 @@
   "dependencies": [
     "base >= 2.0.0",
     "bzlib",
-    "? 248k-Redux",
+    "? 248k-Redux >= 0.1.35",
     "? aai-industry",
     "? bismuth",
     "? Bio_Industries_2",
