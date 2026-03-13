@@ -1,4 +1,4 @@
-local util = require("data-util")
+local util = require("__bzlib__/data-util")
 
 local turret_base_ingredients = {{type="item", name="iron-plate", amount=10}, {type="item", name="iron-gear-wheel", amount=10}}
 if mods["Krastorio2"] and mods["aai-industry"] then

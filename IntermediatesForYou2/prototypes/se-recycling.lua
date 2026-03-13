@@ -1,4 +1,4 @@
-local util = require("data-util")
+local util = require("__bzlib__/data-util")
 if mods["space-exploration"] then
 local se_recycle_long_handed_inserter_results = {{type="item", name="iron-stick", amount=1}, {type="item", name="inserter", amount=1, probability=0.75}}
 if data.raw.item["solder"] then

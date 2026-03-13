@@ -1,4 +1,4 @@
-local util = require("data-util")
+local util = require("__bzlib__/data-util")
 
 if mods["MDbobelectronics2"] then
     util.remove_ingredient("advanced-processing-unit", "processing-electronics")
