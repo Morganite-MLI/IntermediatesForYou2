@@ -28,11 +28,11 @@ if mods["space-exploration"] then
 
     util.remove_ingredient("productivity-module-3", "integrated-circuit")
 
-    util.remove_ingredient("effectivity-module-3", "integrated-circuit")
+    util.remove_ingredient("efficiency-module-3", "integrated-circuit")
 
     util.remove_ingredient("productivity-module-2", "electronic-circuit")
 
-    util.remove_ingredient("effectivity-module-2", "electronic-circuit")
+    util.remove_ingredient("efficiency-module-2", "electronic-circuit")
     if mods["BrassTacks-Updated"] then
         util.add_product("se-core-fragment-omni",{ type = "item", name = "zinc-ore", amount = 8 })
     end
