@@ -1,4 +1,4 @@
-local util = require("data-util")
+local util = require("__bzlib__/data-util")
 
 -- Main vanilla changes
 util.add_ingredient("flamethrower-turret", "turret-base", 1)
@@ -206,8 +206,8 @@ if mods["space-exploration"] then
     util.remove_ingredient("productivity-module-3", "mlcc")
     util.remove_ingredient("productivity-module-3", "cooling-fan")
 
-    util.remove_ingredient("effectivity-module-3", "mlcc")
-    util.remove_ingredient("effectivity-module-3", "cooling-fan")
+    util.remove_ingredient("efficiency-module-3", "mlcc")
+    util.remove_ingredient("efficiency-module-3", "cooling-fan")
 
     util.set_ingredient("speed-module-4", "se-iridium-plate", 90)
     util.add_ingredient("speed-module-4", "elementium-plate", 30)
@@ -224,7 +224,7 @@ if mods["space-exploration"] then
         util.replace_ingredient("se-canister", "plastic-bar", "fi_GFK", 5)
         util.remove_ingredient("se-canister", mods["Krastorio2"] and "kr-glass" or "glass")
 
-        util.add_ingredient("effectivity-module-2", "el_lithium_battery", 10)
+        util.add_ingredient("efficiency-module-2", "el_lithium_battery", 10)
     end
 end
 

@@ -1,6 +1,6 @@
 {
   "name": "IntermediatesForYou2",
-  "version": "2.0.7",
+  "version": "2.1.1",
   "factorio_version": "2.0",
   "title": "IntermediatesForYou",
   "description": "This mod adds some intermediates and is intented to be played with my other mods.\n\nThis mod is inspired by Brevven's BZ mods.",
@@ -8,6 +8,7 @@
   "homepage": "https://discord.gg/ufvFUJtVwk",
   "dependencies": [
     "base >= 2.0.0",
+    "bzlib",
     "? 248k-Redux >= 0.1.35",
     "? aai-industry",
     "? bismuth",
