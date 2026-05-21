@@ -223,6 +223,7 @@ if data.raw.item["bronze-plate"] then
       energy_required = 2,
       ingredients = {{type="item", name="bronze-plate", amount=1}},
       results = {{type="item", name="spring", amount=2}},
+      hide_from_signal_gui = false
     }
   })
   if mods["bzfoundry2"] and not settings.startup["bzfoundry-minimal"].value then
