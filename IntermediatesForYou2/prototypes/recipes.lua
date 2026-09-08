@@ -244,9 +244,9 @@ if mods["ThemTharHills-Updated"] then
   if data.raw.item["circuit-board"] then
     table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="circuit-board", amount=1})
   end
-  local low_quality_advanced_circuit_results = {{ type = "item", name = "advanced-circuit", amount=1, probability=0.75}}
+  local low_quality_advanced_circuit_results = {{ type = "item", name = "advanced-circuit", amount=1, independent_probability=0.75}}
   if mods["space-exploration"] then
-    table.insert(low_quality_advanced_circuit_results, { type = "item", name = "se-scrap", amount=1, probability=0.25})
+    table.insert(low_quality_advanced_circuit_results, { type = "item", name = "se-scrap", amount=1, independent_probability=0.25})
   end
 
   data:extend({
@@ -318,9 +318,9 @@ if mods["space-exploration"] then
   if data.raw.item["cobalt-electromagnet"] then
     table.insert(trace_rare_ore_extraction_ingredients, {type="item", name="cobalt-electromagnet", amount=1})
   end
-  local trace_rare_ore_extraction_results = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=1}, {type="item", name="se-iridium-powder", amount=1, probability=0.1}, {type="item", name="se-holmium-powder", amount=1, probability=0.1}, {type="item", name="se-beryllium-powder", amount=1, probability=0.1}}
+  local trace_rare_ore_extraction_results = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=1}, {type="item", name="se-iridium-powder", amount=1, independent_probability=0.1}, {type="item", name="se-holmium-powder", amount=1, independent_probability=0.1}, {type="item", name="se-beryllium-powder", amount=1, independent_probability=0.1}}
   if data.raw.item["cobalt-electromagnet"] then
-    table.insert(trace_rare_ore_extraction_results, {type="item", name="cobalt-electromagnet", amount=1, probability=0.95})
+    table.insert(trace_rare_ore_extraction_results, {type="item", name="cobalt-electromagnet", amount=1, independent_probability=0.95})
   end
   local elementium_heat_shielding_ingredients = {{type="item", name="elementium-plate", amount=1}, {type="item", name="sulfur", amount=1}}
   if data.raw.item["cuw"] then
