@@ -33,7 +33,7 @@ data:extend({
           icon_size = 64
         }
       },
-      category = "hard-recycling",
+      categories = {"hard-recycling"},
       subgroup = "recycling",
       main_product = "",
       order = "l",
