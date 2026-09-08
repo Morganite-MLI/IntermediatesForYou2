@@ -32,7 +32,7 @@ if mods["Krastorio2"] then
       {
         type = "recipe",
         name = "advanced-electronic-components",
-        category = "crafting",
+        categories = {"crafting"},
         order = "e03",
         enabled = false,
         energy_required = 4,
@@ -51,7 +51,7 @@ if mods["Krastorio2"] then
             { icon = "__Krastorio2Assets__/icons/items/imersite-powder.png", icon_size = 64},
             { icon = "__248k-Redux-graphics__/ressources/fusion/fu_materials/fu_materials_energy_crystal_charged.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
           },
-        category = "kr-crushing",
+        categories = {"kr-crushing"},
         order = "a-a-a-1",
         enabled = false,
         energy_required = 4,
@@ -146,7 +146,7 @@ data:extend({
   {
     type = "recipe",
     name = "turret-base",
-    category = "crafting",
+    categories = {"crafting"},
     order = "t",
     enabled = false,
     energy_required = 8,
@@ -156,7 +156,7 @@ data:extend({
   {
     type = "recipe",
     name = "spring",
-    category = "crafting",
+    categories = {"crafting"},
     order = "s1[spring]",
     enabled = false,
     energy_required = 2,
@@ -166,7 +166,7 @@ data:extend({
   {
     type = "recipe",
     name = "turret-large-base",
-    category = "crafting",
+    categories = {"crafting"},
     order = "t",
     enabled = false,
     energy_required = 16,
@@ -176,7 +176,7 @@ data:extend({
   {
     type = "recipe",
     name = "satellite-body",
-    category = "crafting",
+    categories = {"crafting"},
     order = "s",
     enabled = false,
     energy_required = 20,
@@ -186,7 +186,7 @@ data:extend({
   {
     type = "recipe",
     name = "shock-absorber",
-    category = "crafting",
+    categories = {"crafting"},
     order = "s",
     enabled = false,
     energy_required = 4,
@@ -209,7 +209,7 @@ if data.raw.item["bronze-plate"] then
     {
       type = "recipe",
       name = "bronze-spring",
-      category = "crafting",
+      categories = {"crafting"},
       order = "s2[spring]",
       icons = (data.raw.item["bronze-plate"] and
           {
@@ -244,16 +244,16 @@ if mods["ThemTharHills-Updated"] then
   if data.raw.item["circuit-board"] then
     table.insert(low_quality_advanced_circuit_ingredients, {type="item", name="circuit-board", amount=1})
   end
-  local low_quality_advanced_circuit_results = {{ type = "item", name = "advanced-circuit", amount=1, probability=0.75}}
+  local low_quality_advanced_circuit_results = {{ type = "item", name = "advanced-circuit", amount=1, independent_probability=0.75}}
   if mods["space-exploration"] then
-    table.insert(low_quality_advanced_circuit_results, { type = "item", name = "se-scrap", amount=1, probability=0.25})
+    table.insert(low_quality_advanced_circuit_results, { type = "item", name = "se-scrap", amount=1, independent_probability=0.25})
   end
 
   data:extend({
     {
       type = "recipe",
       name = "low-quality-advanced-circuit",
-      category = "crafting",
+      categories = {"crafting"},
       icons = (mods["Krastorio2"] and
           {
             { icon = "__base__/graphics/icons/advanced-circuit.png", icon_size = 64},
@@ -288,7 +288,7 @@ if mods["aai-industry"] or mods["Krastorio2"] then
     {
       type = "recipe",
       name = "slag",
-      category = "smelting",
+      categories = {"smelting"},
       order = "s[slag]",
       enabled = false,
       energy_required = 2,
@@ -303,7 +303,7 @@ if mods["aai-industry"] or mods["Krastorio2"] then
           { icon = "__base__/graphics/icons/iron-ore.png", icon_size = 64},
           { icon = "__IntermediatesForYou2__/graphics/icons/slag.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
         },
-      category = "smelting",
+      categories = {"smelting"},
       order = "s[slag]",
       enabled = false,
       energy_required = 2,
@@ -318,9 +318,9 @@ if mods["space-exploration"] then
   if data.raw.item["cobalt-electromagnet"] then
     table.insert(trace_rare_ore_extraction_ingredients, {type="item", name="cobalt-electromagnet", amount=1})
   end
-  local trace_rare_ore_extraction_results = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=1}, {type="item", name="se-iridium-powder", amount=1, probability=0.1}, {type="item", name="se-holmium-powder", amount=1, probability=0.1}, {type="item", name="se-beryllium-powder", amount=1, probability=0.1}}
+  local trace_rare_ore_extraction_results = {{type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=1}, {type="item", name="se-iridium-powder", amount=1, independent_probability=0.1}, {type="item", name="se-holmium-powder", amount=1, independent_probability=0.1}, {type="item", name="se-beryllium-powder", amount=1, independent_probability=0.1}}
   if data.raw.item["cobalt-electromagnet"] then
-    table.insert(trace_rare_ore_extraction_results, {type="item", name="cobalt-electromagnet", amount=1, probability=0.95})
+    table.insert(trace_rare_ore_extraction_results, {type="item", name="cobalt-electromagnet", amount=1, independent_probability=0.95})
   end
   local elementium_heat_shielding_ingredients = {{type="item", name="elementium-plate", amount=1}, {type="item", name="sulfur", amount=1}}
   if data.raw.item["cuw"] then
@@ -366,7 +366,7 @@ if mods["space-exploration"] then
     {
       type = "recipe",
       name = "elementite",
-      category = "space-thermodynamics",
+      categories = {"space-thermodynamics"},
       order = "e[elementite]",
       enabled = false,
       energy_required = 20,
@@ -376,7 +376,7 @@ if mods["space-exploration"] then
     {
       type = "recipe",
       name = "elementium-plate",
-      category = "space-thermodynamics",
+      categories = {"space-thermodynamics"},
       order = "e[elementite]",
       enabled = false,
       energy_required = 20,
@@ -386,7 +386,7 @@ if mods["space-exploration"] then
     {
       type = "recipe",
       name = "elementite-dust",
-      category = "pulverising",
+      categories = {"pulverising"},
       order = "e[elementite]",
       enabled = false,
       energy_required = 2,
@@ -398,7 +398,7 @@ if mods["space-exploration"] then
       name = "trace-rare-ore-extraction",
       icon = "__IntermediatesForYou2__/graphics/icons/trace-rare-ore-extraction.png",
       icon_size = 128,
-      category = "space-radiation",
+      categories = {"space-radiation"},
       order = "e[elementite]",
       group = "resources",
       subgroup = "raw-material",
@@ -415,7 +415,7 @@ if mods["space-exploration"] then
           { icon = "__space-exploration-graphics__/graphics/icons/heat-shielding.png", icon_size = 64},
           { icon = "__IntermediatesForYou2__/graphics/icons/elementium-plate.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
         },
-      category = "crafting",
+      categories = {"crafting"},
       order = "f",
       enabled = false,
       energy_required = 10,

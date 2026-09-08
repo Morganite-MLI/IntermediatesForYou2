@@ -1,6 +1,6 @@
 local util = require("__bzlib__/data-util")
 if mods["space-exploration"] then
-local se_recycle_long_handed_inserter_results = {{type="item", name="iron-stick", amount=1}, {type="item", name="inserter", amount=1, probability=0.75}}
+local se_recycle_long_handed_inserter_results = {{type="item", name="iron-stick", amount=1}, {type="item", name="inserter", amount=1, independent_probability=0.75}}
 if data.raw.item["solder"] then
   table.insert(se_recycle_long_handed_inserter_results, {type="item", name="solder", amount=1})
 end
@@ -33,7 +33,7 @@ data:extend({
           icon_size = 64
         }
       },
-      category = "hard-recycling",
+      categories = {"hard-recycling"},
       subgroup = "recycling",
       main_product = "",
       order = "l",

@@ -230,5 +230,5 @@ end
 
 if mods["BrassTacks-Updated"] then
     util.set_main_product("zinc-plate", "zinc-plate")
-    util.add_product("zinc-plate", {type = "item", name="silver-ore", amount=1, probability=0.06})
+    util.add_product("zinc-plate", {type = "item", name="silver-ore", amount=1, independent_probability=0.06})
 end
